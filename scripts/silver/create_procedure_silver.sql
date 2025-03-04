@@ -23,7 +23,7 @@ begin
 			cst_create_date
 		)
 
-		select cst_id,cst_key, cst_firstname, cst_lastname,
+		select cst_id,cst_key, trim(cst_firstname) as cst_firstname, trim(cst_lastname) as cst_lastname,
 		case when upper(cst_gender) = 'F' then 'Female'
 			when upper(cst_gender) = 'M' then 'Male'
 			else 'N/A'
