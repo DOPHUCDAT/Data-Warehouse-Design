@@ -13,7 +13,7 @@ begin
 		truncate table bronze.crm_cust_info --Loại bỏ hết dữ liệu trong bảng
 		print '>> Inserting Data Into: bronze.crm_cust_info'
 		bulk insert bronze.crm_cust_info --Load toàn bộ dữ liệu vào bảng
-		from 'F:\DataWarehouse\source_crm\cust_info.csv'
+		from 'F:\DataWarehouse\datasets\source_crm\cust_info.csv'
 		with(
 			firstrow = 2, -- = header
 			fieldterminator = ',', -- = delimiter
@@ -28,7 +28,7 @@ begin
 		truncate table bronze.crm_prd_info
 		print '>> Inserting Data Into: bronze.crm_prd_info'
 		bulk insert bronze.crm_prd_info
-		from 'F:\DataWarehouse\source_crm\prd_info.csv'
+		from 'F:\DataWarehouse\datasets\source_crm\prd_info.csv'
 		with(
 			firstrow = 2,
 			fieldterminator = ',',
@@ -43,7 +43,7 @@ begin
 		truncate table bronze.crm_sales_details
 		print '>> Inserting Data Into: bronze.crm_sales_details'
 		bulk insert bronze.crm_sales_details
-		from 'F:\DataWarehouse\source_crm\sales_details.csv'
+		from 'F:\DataWarehouse\datasets\source_crm\sales_details.csv'
 		with(
 			firstrow = 2,
 			fieldterminator = ',',
@@ -59,7 +59,7 @@ begin
 		truncate table bronze.erp_cust_az12
 		print '>> Inserting Data Into: bronze.erp_cust_az12'
 		bulk insert bronze.erp_cust_az12
-		from 'F:\DataWarehouse\source_erp\CUST_AZ12.csv'
+		from 'F:\DataWarehouse\datasets\source_erp\CUST_AZ12.csv'
 		with(
 			firstrow = 2,
 			fieldterminator = ',',
@@ -74,7 +74,7 @@ begin
 		truncate table bronze.erp_loc_a101
 		print '>> Inserting Data Into: bronze.erp_loc_a101'
 		bulk insert bronze.erp_loc_a101
-		from 'F:\DataWarehouse\source_erp\LOC_A101.csv'
+		from 'F:\DataWarehouse\datasets\source_erp\LOC_A101.csv'
 		with(
 			firstrow = 2,
 			fieldterminator = ',',
@@ -89,7 +89,7 @@ begin
 		truncate table bronze.erp_px_cat_g1v2
 		print '>> Inserting Data Into: bronze.erp_px_cat_g1v2'
 		bulk insert bronze.erp_px_cat_g1v2
-		from 'F:\DataWarehouse\source_erp\PX_CAT_G1V2.csv'
+		from 'F:\DataWarehouse\datasets\source_erp\PX_CAT_G1V2.csv'
 		with(
 			firstrow = 2,
 			fieldterminator = ',',
