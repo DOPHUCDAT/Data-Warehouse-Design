@@ -155,4 +155,6 @@ select * from bronze.erp_px_cat_g1v2
 where id not in (select cat_id from silver.crm_prd_info)
 
 select * from bronze.erp_px_cat_g1v2
-where cat != trim(cat) or subcat != trim(subcat) or maintenance != trim(maintenance) 
+where cat != trim(cat) 
+or subcat != trim(subcat) 
+or maintenance != trim(maintenance) 
