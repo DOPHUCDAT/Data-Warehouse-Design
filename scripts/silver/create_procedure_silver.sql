@@ -19,7 +19,7 @@ begin
 			cst_firstname,
 			cst_lastname,
 			cst_gender,
-			cst_material_status,
+			cst_marital_status,
 			cst_create_date
 		)
 
@@ -28,8 +28,8 @@ begin
 			when upper(cst_gender) = 'M' then 'Male'
 			else 'N/A'
 		end cst_gender,
-		case when upper(cst_material_status) = 'M' then 'Married'
-			when upper(cst_material_status) = 'S' then 'Single'
+		case when upper(cst_marital_status) = 'M' then 'Married'
+			when upper(cst_marital_status) = 'S' then 'Single'
 			else 'N/A'
 		end cst_material_status,
 		cst_create_date
