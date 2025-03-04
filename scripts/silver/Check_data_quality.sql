@@ -1,6 +1,6 @@
 ﻿-- Bảng bronze.crm_cust_info
 -- Kiểm tra id có phải là duy nhất hay không 
-select * --window function
+select * 
 from
 (
 	select *, ROW_NUMBER() over (partition by cst_id order by cst_create_date) as notunique_id
@@ -25,31 +25,6 @@ group by cst_gender
 
 select cst_material_status
 from bronze.crm_cust_info
-group by cst_material_status
-
--- Kiểm tra kết quả làm sạch của silver layer
-select * 
-from
-(
-	select *, ROW_NUMBER() over (partition by cst_id order by cst_gender) as notunique_id
-	from silver.crm_cust_info
-) as myass 
-where notunique_id != 1
-
-select cst_firstname
-from silver.crm_cust_info
-where cst_firstname != trim(cst_firstname)
-
-select cst_lastname
-from silver.crm_cust_info
-where cst_lastname != trim(cst_lastname)
-
-select cst_gender
-from silver.crm_cust_info
-group by cst_gender
-
-select cst_material_status
-from silver.crm_cust_info
 group by cst_material_status
 
 --Bảng bronze.crm_prd_info
