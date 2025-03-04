@@ -57,19 +57,19 @@ select * from bronze.crm_sales_details
 select nullif(sls_order_dt, 0) sls_order_dt from bronze.crm_sales_details
 where sls_order_dt <= 0
 or len(sls_order_dt) != 8
-or sls_order_dt > 20260101
+or sls_order_dt > 20300101
 or sls_order_dt < 19000101
 
 select nullif(sls_ship_dt, 0) sls_ship_dt from bronze.crm_sales_details
 where sls_ship_dt <= 0
 or len(sls_ship_dt) != 8
-or sls_ship_dt > 20260101
+or sls_ship_dt > 20300101
 or sls_ship_dt < 19000101
 
 select nullif(sls_due_dt, 0) sls_due_dt from bronze.crm_sales_details
 where sls_due_dt <= 0
 or len(sls_due_dt) != 8
-or sls_due_dt > 20260101
+or sls_due_dt > 20300101
 or sls_due_dt < 19000101
 
 -- Kiểm tra logic của ngày order với ngày ship hàng và ngày nhận hàng
