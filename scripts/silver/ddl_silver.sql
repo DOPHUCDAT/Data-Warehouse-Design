@@ -6,7 +6,7 @@ use DataWarehouse
 		cst_key nvarchar(50),
 		cst_firstname nvarchar(50),
 		cst_lastname nvarchar(50),
-		cst_material_status nvarchar(50),
+		cst_marital_status nvarchar(50),
 		cst_gender nvarchar(50),
 		cst_create_date date,
 		dwh_create_date datetime2 default GETDATE()
