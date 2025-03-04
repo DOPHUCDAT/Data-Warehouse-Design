@@ -23,9 +23,9 @@ select cst_gender
 from bronze.crm_cust_info
 group by cst_gender
 
-select cst_material_status
+select cst_marital_status
 from bronze.crm_cust_info
-group by cst_material_status
+group by cst_marital_status
 
 --Bảng bronze.crm_prd_info
 select * from bronze.crm_prd_info
